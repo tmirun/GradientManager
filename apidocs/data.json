@@ -1,0 +1,136 @@
+{
+    "project": {
+        "name": "gradientManager.js",
+        "description": "manage gradients elemento of d3.js <svg> element",
+        "version": "1.0.0",
+        "url": "https://github.com/tmirun/gradientManager",
+        "_comment": "comand: yuidoc -c yuidoc.json ."
+    },
+    "files": {
+        "gradientManager.js": {
+            "name": "gradientManager.js",
+            "modules": {},
+            "classes": {
+                "GradientManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "GradientManager": {
+            "name": "GradientManager",
+            "shortname": "GradientManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "gradientManager.js",
+            "line": 10,
+            "description": "this class manage the gradient in svg <b>requiered d3.js library</b> <br>\nreference: <a href='http://www.w3schools.com/svg/svg_grad_linear.asp'>w3school svg</a>",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "context",
+                    "description": "example:d3.select('#svg_container')",
+                    "type": "d3.js dom"
+                }
+            ],
+            "example": [
+                "\n<pre>\n  var paper = d3.select('#svg_container');\n\n  var stops = [\n                  {\n                      offset: 0,\n                      style: \"stop-color:rgba(255,255,0,0);\"\n                   },\n                   {\n                       offset: 100,\n                       style: \"stop-color:rgba(255,0,0,1);\"\n                   }\n               ]\n\n   var gradient = new GradientManager(paper);\n\n   gradient.gradientStop('prueba', stops);\n\n   paper.append(\"circle\")\n       .attr(\"cx\", 30)\n       .attr(\"cy\", 30)\n       .attr(\"r\", 20)\n       .attr('fill', 'url(#prueba)');\n</pre>"
+            ]
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "gradientManager.js",
+            "line": 45,
+            "itemtype": "property",
+            "name": "context",
+            "type": "{d3.js dom}",
+            "class": "GradientManager"
+        },
+        {
+            "file": "gradientManager.js",
+            "line": 51,
+            "description": "example: {gradientId:[DOM linearGradientManager]}",
+            "itemtype": "property",
+            "name": "gradients",
+            "type": "{object}",
+            "class": "GradientManager"
+        },
+        {
+            "file": "gradientManager.js",
+            "line": 58,
+            "description": "dom element [defs] where save gradient in [svg]",
+            "itemtype": "property",
+            "name": "defs",
+            "type": "{dom}",
+            "class": "GradientManager"
+        },
+        {
+            "file": "gradientManager.js",
+            "line": 73,
+            "description": "create linegradient element insite [defs] dom element",
+            "itemtype": "method",
+            "name": "linearGradient",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "id of gradient element: [linearGradient id=\"{id}\"];",
+                    "type": "Number|string"
+                },
+                {
+                    "name": "deg",
+                    "description": "angle in \"degº\" of gradient",
+                    "type": "Number"
+                },
+                {
+                    "name": "attr",
+                    "description": "set [defs] element attributes",
+                    "type": "Object"
+                }
+            ],
+            "class": "GradientManager"
+        },
+        {
+            "file": "gradientManager.js",
+            "line": 101,
+            "description": "create lineargradient with id",
+            "itemtype": "method",
+            "name": "gradientStop",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "of gradient",
+                    "type": "String|number"
+                },
+                {
+                    "name": "gradient",
+                    "description": "object",
+                    "type": "Object"
+                }
+            ],
+            "class": "GradientManager"
+        },
+        {
+            "file": "gradientManager.js",
+            "line": 155,
+            "description": "get gradient by id",
+            "itemtype": "method",
+            "name": "getGradient",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "of gradient",
+                    "type": "String|number"
+                }
+            ],
+            "class": "GradientManager"
+        }
+    ],
+    "warnings": []
+}
