@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Raphael Play</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="gradientManager.js"></script>
+        <style type="text/css">
+            #canvas_container {
+                width: 900px;
+                height: 500px;
+                border: 1px solid #aaa;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="canvas_container">
+            <svg id="svg_container" width=800 height= 500>
+                <defs></defs>
+            </svg>
+        </div>
+    </body>
+    <script>
+
+        var paper = d3.select('#svg_container');
+
+        var stops = [
+                        {
+                            offset: 0,
+                            style: "stop-color:rgba(255,255,0,0);"
+                        },
+                        {
+                            offset: 100,
+                            style: "stop-color:rgba(255,0,0,1);"
+                        }
+                    ]
+
+        var stops2 = [
+                        {
+                            offset: "0%",
+                            style: "stop-color:rgba(255,0,255,1);"
+                        },
+                        {
+                            offset: "70%",
+                            style: "stop-color:rgba(255,25,0,1);"
+                        },
+                        {
+                            offset: "100%",
+                            style: "stop-color:rgba(0,200,200,1);"
+                        }
+                    ]
+
+        var gradient = new GradientManager(paper);
+
+        gradient.linearGradient('prueba')
+        gradient.linearGradient('prueba2')
+        gradient.linearGradient('prueba')
+        gradient.gradientStop('prueba', stops);
+        gradient.gradientStop('prueba2', stops2);
+
+        paper.append("circle")
+            .attr("cx", 50)
+            .attr("cy", 50)
+            .attr("r", 30)
+            .attr('fill', 'url(#prueba)');
+
+        paper.append("circle")
+            .attr("cx", 150)
+            .attr("cy", 100)
+            .attr("r", 70)
+            .attr('fill', 'url(#prueba2)');
+
+    </script>
+</html>
