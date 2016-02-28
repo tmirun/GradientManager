@@ -1,0 +1,10 @@
+{
+    "name": "gradientManager.js",
+    "description": "manage gradients elemento of d3.js <svg> element",
+    "version": "1.0.0",
+    "url": "https://github.com/tmirun/gradientManager",
+    "options": {
+        "outdir": "./apidocs"
+    },
+    "_comment": "comand: yuidoc -c yuidoc.json ."
+}
