@@ -156,8 +156,8 @@ GradientManager.prototype.gradientStop = function(id, stops){
 * get gradient by id
 * @method getGradient
 * @param {string|number} id of gradient
+* @return {d3.DOM} gradientElement
 */
 GradientManager.prototype.getGradient = function(id){
     return this.gradients[id];
 }
-
