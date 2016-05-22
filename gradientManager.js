@@ -30,7 +30,7 @@
 *                ]
 *
 *    var gradient = new GradientManager(paper);
-*
+*    gradient.linearGradient('prueba');
 *    gradient.gradientStop('prueba', stops);
 *
 *    paper.append("circle")
