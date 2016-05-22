@@ -112,7 +112,7 @@
 *                ]
 *
 *    var gradient = new GradientManager(paper);
-*
+*    gradient.linearGradient(&#x27;prueba&#x27;);
 *    gradient.gradientStop(&#x27;prueba&#x27;, stops);
 *
 *    paper.append(&quot;circle&quot;)
@@ -238,11 +238,11 @@ GradientManager.prototype.gradientStop = function(id, stops){
 * get gradient by id
 * @method getGradient
 * @param {string|number} id of gradient
+* @return {d3.DOM} gradientElement
 */
 GradientManager.prototype.getGradient = function(id){
     return this.gradients[id];
 }
-
 
     </pre>
 </div>

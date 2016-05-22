@@ -39,7 +39,7 @@
                 }
             ],
             "example": [
-                "\n<pre>\n  var paper = d3.select('#svg_container');\n\n  var stops = [\n                  {\n                      offset: 0,\n                      style: \"stop-color:rgba(255,255,0,0);\"\n                   },\n                   {\n                       offset: 100,\n                       style: \"stop-color:rgba(255,0,0,1);\"\n                   }\n               ]\n\n   var gradient = new GradientManager(paper);\n\n   gradient.gradientStop('prueba', stops);\n\n   paper.append(\"circle\")\n       .attr(\"cx\", 30)\n       .attr(\"cy\", 30)\n       .attr(\"r\", 20)\n       .attr('fill', 'url(#prueba)');\n</pre>"
+                "\n<pre>\n  var paper = d3.select('#svg_container');\n\n  var stops = [\n                  {\n                      offset: 0,\n                      style: \"stop-color:rgba(255,255,0,0);\"\n                   },\n                   {\n                       offset: 100,\n                       style: \"stop-color:rgba(255,0,0,1);\"\n                   }\n               ]\n\n   var gradient = new GradientManager(paper);\n   gradient.linearGradient('prueba');\n   gradient.gradientStop('prueba', stops);\n\n   paper.append(\"circle\")\n       .attr(\"cx\", 30)\n       .attr(\"cy\", 30)\n       .attr(\"r\", 20)\n       .attr('fill', 'url(#prueba)');\n</pre>"
             ]
         }
     },
@@ -129,6 +129,10 @@
                     "type": "String|number"
                 }
             ],
+            "return": {
+                "description": "gradientElement",
+                "type": "d3.DOM"
+            },
             "class": "GradientManager"
         }
     ],
