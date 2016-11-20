@@ -1,6 +1,6 @@
 /*
 * author: tmirun
-* version: 1.0.0
+* version: 1.0.2
 *          | | |
 *          | | fix error
 *          | change some thing important of library
@@ -134,7 +134,7 @@ GradientManager.prototype.gradientStop = function(id, stops){
 
     else{
 
-        if(gradient.selectAll("stop")[0].length != stops.length){
+        if(gradient.selectAll("stop").size() != stops.length){
             gradient.selectAll("stop").remove();
             createNew();
         }
