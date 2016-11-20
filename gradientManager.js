@@ -86,9 +86,9 @@ GradientManager.prototype.linearGradient = function(id , deg, attr){
     if(this.defs.select("#"+id).empty()){
 
         gradient = this.defs.append("linearGradient")
-                        .attr("id",id)
-                        .attr("gradientTransform", "rotate("+deg+")")
-                        .attr(attr);
+        gradient.attr("id",id)
+                .attr("gradientTransform", "rotate("+deg+")")
+                .attr(attr);
     }
 
     else{
